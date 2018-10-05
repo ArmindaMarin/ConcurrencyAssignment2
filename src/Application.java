@@ -4,8 +4,8 @@ public class Application {
     }
 
     public void run() {
-        ThreadWorld world = new ThreadWorld();
-        int amountOfVisitors = 10;
+        Club world = new Club(20);
+        int amountOfVisitors = 30;
         int amountOfRecordLabelPeople = 2;
 
         Thread[] visitors = new Thread[amountOfVisitors];
@@ -15,7 +15,7 @@ public class Application {
             visitors[i] = new Visitor(i, world);
             visitors[i].start();
         }
-        
+
         for (int i = 0; i < amountOfRecordLabelPeople; i++) {
             recordLabelPeople[i] = new RecordLabelPerson(i, world);
             recordLabelPeople[i].start();

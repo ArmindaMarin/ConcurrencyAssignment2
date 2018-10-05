@@ -1,11 +1,16 @@
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class ThreadWorld {
-    ReentrantLock lock = new ReentrantLock();
-    Condition availableRoom = lock.newCondition();
+public class Club {
+    private ReentrantLock lock = new ReentrantLock();
+    private Condition availableRoom = lock.newCondition();
+    private int availableSpace;
 
-    public void enterWorld() {
+    public Club(int maxSpace) {
+        this.availableSpace = maxSpace;
+    }
+
+    public void enterClub() {
         Thread currentThread = Thread.currentThread();
         if (Thread.currentThread() instanceof Visitor) {
             visitorEnter((Visitor) currentThread);
@@ -14,7 +19,7 @@ public class ThreadWorld {
         }
     }
 
-    public void exitWorld() {
+    public void exitClub() {
         Thread currentThread = Thread.currentThread();
         if (Thread.currentThread() instanceof Visitor) {
             visitorExit((Visitor) currentThread);
@@ -29,6 +34,7 @@ public class ThreadWorld {
             if (tooManyPeopleInside()) {
                 availableRoom.await();
             }
+            availableSpace--;
         } catch (InterruptedException ie) {
             ie.printStackTrace();
         } finally {
@@ -37,21 +43,33 @@ public class ThreadWorld {
     }
 
     public void visitorExit(Visitor visitor) {
-
+        lock.lock();
+        availableSpace++;
+        System.out.println(visitor.getName() + " is leaving the disco");
+        availableRoom.signal();
+        lock.unlock();
     }
 
     public void recordLabelPersonEnter(RecordLabelPerson recordLabelPerson) {
         lock.lock();
+        availableSpace--;
         availableRoom.signal();
         lock.unlock();
     }
 
     public void recordLabelPersonExit(RecordLabelPerson recordLabelPerson) {
-
+        lock.lock();
+        availableSpace++;
+        System.out.println(recordLabelPerson.getName() + " is leaving the disco");
+        lock.unlock();
     }
 
     public boolean tooManyPeopleInside() {
-        return true;
+        if (availableSpace > 0) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
 }
