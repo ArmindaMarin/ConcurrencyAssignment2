@@ -12,7 +12,7 @@ public class Application {
         Thread[] recordLabelPeople = new Thread[amountOfRecordLabelPeople];
 
         for (int i = 0; i < amountOfVisitors; i++) {
-            if(i < amountOfRecordLabelPeople){
+            if (i < amountOfRecordLabelPeople) {
                 recordLabelPeople[i] = new RecordLabelPerson(i, world);
                 recordLabelPeople[i].start();
             }

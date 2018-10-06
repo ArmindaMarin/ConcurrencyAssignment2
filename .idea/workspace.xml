@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d1cdacaf-110c-4a90-8ac4-e5d2b8e69a98" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Club.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Club.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RecordLabelPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RecordLabelPerson.java" afterDir="false" />
-    </list>
+    <list default="true" id="d1cdacaf-110c-4a90-8ac4-e5d2b8e69a98" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +15,8 @@
       <file leaf-file-name="Club.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Club.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+            <state relative-caret-position="246">
+              <caret line="72" column="46" lean-forward="true" selection-start-line="72" selection-start-column="11" selection-end-line="72" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -297,8 +292,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Club.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+        <state relative-caret-position="246">
+          <caret line="72" column="46" lean-forward="true" selection-start-line="72" selection-start-column="11" selection-end-line="72" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

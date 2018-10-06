@@ -39,7 +39,7 @@ public class Club {
             if (tooManyPeopleInside() || accessDeniedForVisitor) {
                 availableRoom.await();
             }
-            if(accessDeniedForRecordLabelPerson >= 3){
+            if (accessDeniedForRecordLabelPerson >= 3) {
                 accessDeniedForRecordLabelPerson = 0;
             }
             availableSpace--;
