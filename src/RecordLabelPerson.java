@@ -19,6 +19,9 @@ public class RecordLabelPerson extends Thread {
                 sleep((int) (Math.random() * 500 + 1000));
 
                 world.exitClub();
+
+                sleep((int) (Math.random() * 100 + 1000));
+
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
